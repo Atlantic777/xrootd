@@ -19,7 +19,7 @@ endif()
 configure_file(${SETUP_PY_IN} ${SETUP_PY})
 
 add_custom_command(OUTPUT ${OUTPUT}
-                   COMMAND ${PYTHON_EXECUTABLE} ${SETUP_PY} build
+                   COMMAND ${Python_EXECUTABLE} ${SETUP_PY} build
                    DEPENDS ${DEPS})
 
 add_custom_target(python_target ALL DEPENDS ${OUTPUT} XrdCl)
@@ -27,5 +27,5 @@ add_custom_target(python_target ALL DEPENDS ${OUTPUT} XrdCl)
 install(
   CODE
   "EXECUTE_PROCESS(
-    COMMAND ${PYTHON_EXECUTABLE} ${SETUP_PY} install --prefix \$ENV{DESTDIR}/${CMAKE_INSTALL_PREFIX} --record PYTHON_INSTALLED)")
+    COMMAND ${Python_EXECUTABLE} ${SETUP_PY} install --prefix \$ENV{DESTDIR}/${CMAKE_INSTALL_PREFIX} --record PYTHON_INSTALLED)")
 
