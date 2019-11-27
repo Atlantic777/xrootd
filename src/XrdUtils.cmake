@@ -202,6 +202,7 @@ target_link_libraries(
   XrdUtils
   pthread
   ${CMAKE_DL_LIBS}
+  ${OPENSSL_LIBRARIES}
   ${SOCKET_LIBRARY}
   ${SENDFILE_LIBRARY}
   ${EXTRA_LIBS} )

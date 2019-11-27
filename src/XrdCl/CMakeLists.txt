@@ -98,7 +98,8 @@ target_link_libraries(
   ${UUID_LIBRARIES}
   z
   ${EXTRA_LIBS}
-  ${CMAKE_DL_LIBS})
+  ${CMAKE_DL_LIBS}
+  ${OPENSSL_LIBRARIES})
 
 set_target_properties(
   XrdCl
